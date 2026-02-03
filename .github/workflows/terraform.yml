@@ -7,12 +7,15 @@ on:
       - stage
     paths:
       - "terraform/**"
+      - ".github/workflows/terraform.yml"
   pull_request:
     branches:
       - main
       - stage
     paths:
       - "terraform/**"
+      - ".github/workflows/terraform.yml"
+  workflow_dispatch:
 
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
